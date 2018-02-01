@@ -1,7 +1,3 @@
-## Author: charl <charl@DESKTOP-5QEEJRC>
-## Created: 2018-01-24
-
-##Computes the first n rows of the Pascal Triangle
 function [PT] = pascalTriangle (n)
 
   PT(1:n, 1:n) = 0;
