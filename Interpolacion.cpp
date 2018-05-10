@@ -87,41 +87,44 @@ double poli(double x){
 	return ret;
 }
 
+double poli10(double x){
+	return pow(x - 1.0, 10.0);
+}
+
 int main() {
 
 	int n;
 	vector<double> x, f;
-	n = 11;
+	n = 6;
 	
 	x.resize(n); f.resize(n);
 	for(int i = 0; i < n; i++){
-		x[i] = 0.99 + 0.002 * i;
-		f[i] = poli( x[i] );
+		x[i] = 0.99 + 0.004 * (double)(i);
+		f[i] = poli10( x[i] );
 	}
 	
 	formaInterpolante * fp = new formaInterpolante(x, f);
-	//cout << fp->evaluate(0.99) << endl;
+	cout << fp->evaluate(0.991) << endl;
 	
 	interpolacionLagrange * lp = new interpolacionLagrange(x, f);
-	//cout << lp->evaluate(0.99) << endl;
+	cout << lp->evaluate(0.991) << endl;
 	
-	vector <double> maya;
 	double tam = 1000;
 	double h = (1.01 - 0.99) / tam;
 	double maxerr1 = 0, maxerr2 = 0;
 	
 	for(int i = 0; i <= tam; i++){
 		double t = x[0] + h * (double)(i);
-		double real = poli(t);
+		cout << t << " ";
+		double real = poli10(t);
 		if(real != 0){
 			//cout << t << " " << real << " " << fp->evaluate(t) << " " << lp->evaluate(t) << "\n";
-			maxerr1 = max( maxerr1, abs ( ( real - fp->evaluate(t) ) / real ) );
-			maxerr2 = max( maxerr2, abs ( ( real - lp->evaluate(t) ) / real ) );
+			maxerr1 = max( maxerr1, abs ( ( real - fp->evaluate(t) )  ) );
+			maxerr2 = max( maxerr2, abs ( ( real - lp->evaluate(t) )  ) );
 		}
 	}
 	
 	cout << maxerr1 << " " << maxerr2 << "\n";
-	
 	
 	//cout << poli(1) << endl;
 	return 0;

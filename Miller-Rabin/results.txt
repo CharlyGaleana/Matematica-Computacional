@@ -1,0 +1,20 @@
+----- PRIMER TEST -----
+Se probo Miller-Rabin con 1000000 primos y hubo 0 errores
+
+----- SEGUNDO TEST -----
+Para s = 1 se tuvo un porcentaje de aciertos de 100
+Para s = 2 se tuvo un porcentaje de aciertos de 100
+Para s = 3 se tuvo un porcentaje de aciertos de 100
+Para s = 4 se tuvo un porcentaje de aciertos de 100
+Para s = 5 se tuvo un porcentaje de aciertos de 100
+
+----- TERCER TEST -----
+El tiempo promedio de ejecucion de Miller-Rabin fue de 2e-005 segs
+El tiempo promedio de ejecucion del algoritmo determinista fue de 0.03462 segs
+
+----- CUARTO TEST -----
+Para s = 1 se tuvo un porcentaje de aciertos de 93.75
+Para s = 2 se tuvo un porcentaje de aciertos de 100
+Para s = 3 se tuvo un porcentaje de aciertos de 100
+Para s = 4 se tuvo un porcentaje de aciertos de 100
+Para s = 5 se tuvo un porcentaje de aciertos de 100

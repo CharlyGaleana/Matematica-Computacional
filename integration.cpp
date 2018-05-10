@@ -34,7 +34,6 @@ double trapIntegr( double (*f)(double), double a, double b, int n ){
 	sum *= h;
 	
 	return sum;
-	
 }
 
 double simpIntegr( double (*f)(double), double a, double b, int n ){
